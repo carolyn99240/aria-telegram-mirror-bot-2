@@ -21,12 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - if: github.event.pusher.name != 'k-e-n-w-a-y'
+      - if: github.event.pusher.name != 'carolyn99240'
         name: Check last commit author
         run: echo "Author mismatch existing..." && exit 1
 
       - name: Login to ghcr.io registry
-        run: docker login https://ghcr.io -u k-e-n-w-a-y -p ${{ secrets.GH_TOKEN }}
+        run: docker login https://ghcr.io -u carolyn99240 -p ${{ secrets.GH_TOKEN }}
 
       - name: Build and Push image
         run: |
@@ -38,8 +38,8 @@ jobs:
 
           echo VERSION=$VERSION
           echo "Building"
-          docker build . -f docker-publish/Dockerfile -t "ghcr.io/k-e-n-w-a-y/aria-telegram-mirror-bot:$VERSION"
+          docker build . -f docker-publish/Dockerfile -t "ghcr.io/carolyn99240/aria-telegram-mirror-bot-2:$VERSION"
 
           echo "Pushing"
 
-          docker push "ghcr.io/k-e-n-w-a-y/aria-telegram-mirror-bot:$VERSION"
+          docker push "ghcr.io/carolyn99240/aria-telegram-mirror-bot-2:$VERSION"
