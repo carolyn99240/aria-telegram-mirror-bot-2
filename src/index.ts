@@ -301,10 +301,10 @@ setEventCallback(eventRegex.commandsRegex.list, eventRegex.commandsRegexNoName.l
 });
 
 async function createTelegraphPage(content: any) {
-  return ph.createPage(constants.TELEGRAPH_TOKEN, 'Mirror Bot Search', content, {
+  return ph.createPage(constants.TELEGRAPH_TOKEN, 'Sledger Cloud', content, {
     return_content: true,
-    author_name: 'aria-telegram-mirror-bot',
-    author_url: 'https://github.com/arghyac35/aria-telegram-mirror-bot'
+    author_name: 'Data Toaster',
+    author_url: '#'
   });
 }
 
