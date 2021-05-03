@@ -303,7 +303,7 @@ setEventCallback(eventRegex.commandsRegex.list, eventRegex.commandsRegexNoName.l
 async function createTelegraphPage(content: any) {
   return ph.createPage(constants.TELEGRAPH_TOKEN, 'Sledger Cloud', content, {
     return_content: true,
-    author_name: 'Data Toaster',
+    author_name: 'Data Toaster 2',
     author_url: '#'
   });
 }
